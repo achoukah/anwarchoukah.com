@@ -225,13 +225,13 @@ section img {
   margin: 0 0 1rem 0;
   border-left: medium solid #dddddd;
 }
-.contact form label {
+.contact fieldset label {
   display: block;
   font-size: .9rem;
   margin: 0 0 .3rem 0;
 }
-.contact form input,
-.contact form textarea {
+.contact fieldset input,
+.contact fieldset textarea {
   width: 100%;
   max-width: 100%;
   padding: .4rem;
@@ -243,13 +243,13 @@ section img {
   transition: all .2s;
   border-radius: 0;
 }
-.contact form input:focus,
-.contact form textarea:focus {
+.contact fieldset input:focus,
+.contact fieldset textarea:focus {
   background: #eeeeee;
   border: thin solid #666666;
   outline: thin solid transparent;
 }
-.contact form button.submit_btn {
+.contact fieldset button.submit_btn {
   -webkit-appearance: none;
   width: 100%;
   padding: 1rem 4rem;
@@ -260,12 +260,13 @@ section img {
   border: thin solid #600000;
   -webkit-transition: all .2s;
   transition: all .2s;
+  font-family: Playfair Display, sans-serif;
 }
-.contact form input[type=submit]:hover {
+.contact fieldset button.submit_btn:hover {
   background: #c60000;
   border: thin solid #c60000;
 }
-.contact form textarea {
+.contact fieldset textarea {
   min-height: 5rem;
 }
 footer {
