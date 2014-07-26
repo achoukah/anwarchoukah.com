@@ -2,93 +2,175 @@
 <html lang="en">
 
 <head>
-  <meta name="description" content="Webpage description goes here" />
-  <meta charset="utf-8">
-  <title>Anwar Choukah</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css">
-  <!--[if IE]>
+    <meta name="description" content="Webpage description goes here" />
+    <meta charset="utf-8">
+    <title>Anwar Choukah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css">
+    <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 36rem)" href="css/style-mobile.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 36rem)" href="css/style-mobile.css" />
 
-  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
-  <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/lightbox.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1><a href="index.html">Anwar Choukah</a>
-      </h1>
-      <h2>Graphic and web designer, CSS afficionado, experimentalist</h2>
-    </header>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Anwar Choukah</a>
+            </h1>
+            <h2>Graphic and web designer, CSS afficionado, experimentalist</h2>
+        </header>
 
-    <section class="intro">
-      <h1>Coming soon &mdash; under construction.</h1>
+        <section class="intro">
+            <h1>Coming soon &mdash; under construction.</h1>
 
-      
 
-      <figure>
 
-        <img src="img/me.jpg" alt="Anwar Choukah lugging two bikes up a hill in Gozo, Malta">
-        <figcaption>
-          <strong>That's me</strong>shifting two bikes up a hill &mdash; a metaphor for making websites?
-        </figcaption>
-      </figure>
+            <figure>
 
-      <p><em></em></p>
+                <img src="img/me.jpg" alt="Anwar Choukah lugging two bikes up a hill in Gozo, Malta">
+                <figcaption>
+                    <strong>That's me</strong>shifting two bikes up a hill &mdash; a metaphor for making websites?
+                </figcaption>
+            </figure>
 
-      <p>When it's finished, this website will house my portfolio, my CV, and my blog.</p>
+            <p>
+                <em></em>
+            </p>
 
-      <p>There will also be CSS, HTML, and tech reading lists. as well as a smattering of Oxford commas.</p>
+            <p>When it's finished, this website will house my portfolio, my CV, and my blog.</p>
 
-      <p>I am a designer, currently working for <a href="http://thesun.co.uk" title="The Sun website, where Anwar Choukah works as a designer">The Sun</a> as a digital web and graphic designer, where I've been for over ten years.</p>
+            <p>There will also be CSS, HTML, and tech reading lists. as well as a smattering of Oxford commas.</p>
 
-      <p>I am the proud father of two lovely daughters and proud partner of my girlfriend.</p>
+            <p>I am a designer, currently working for <a href="http://thesun.co.uk" title="The Sun website, where Anwar Choukah works as a designer">The Sun</a> as a digital web and graphic designer, where I've been for over ten years.</p>
 
-      <p>If you're into that kind of thing, I'm on <a href="http://twitter.com/achoukah">Twitter</a>.</p>
+            <p>I am the proud father of two lovely daughters and proud partner of my girlfriend.</p>
 
-      <p>My favourite CSS declaration is <code>box-sizing: border box;</code> and it should be yours too.</p>
-    </section>
+            <p>If you're into that kind of thing, I'm on <a href="http://twitter.com/achoukah">Twitter</a>.</p>
 
-    <section class="contact">
-      <h1>Contact me</h1>
+            <p>My favourite CSS declaration is
+                <code>box-sizing: border box;</code>and it should be yours too.</p>
+        </section>
 
-      <div id="form-messages">
-        <p>Thanks for contacting me.</p> 
-        <p>I will, of course, read your email and get back in touch as a matter of priority.</p>
-      </div>
+        <section class="contact">
+            <h1>Contact me</h1>
 
-      <form id="ajax-contact" method="post" action="mailer.php">
-        <label for="contact-name">Name</label>
-        <input type="text" id="name" name="name" required>
+            <form id="ajax-contact" method="post" action="mailer.php">
+                <fieldset id="contact_form">
+                    <div id="result"></div>
+                    <label for="name">
+                        <span>Name</span>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" />
+                    </label>
 
-        <label for="contact-email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="contact-email">Message</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <input type="submit" value="Send">
-      </form>
-    </section>
-  </div>
+                    <label for="email">
+                        <span>Email Address</span>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" />
+                    </label>
 
-  <footer>
-    <ul>
-      <li>&copy; <a href="http://anwarchoukah.com" title="Anwar Choukah">Anwar Choukah</a></li>
-      <li><a href="http://anwarchoukah.tumblr.com">My (mainly) comics Tumblr</a></li>
-      <li><a href="http://twitter.com/achoukah">Twitter</a></li>
-    </ul>
-  </footer>
-  
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/app.js"></script>
+                    <label for="message">
+                        <span>Message</span>
+                        <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+                    </label>
+
+                    <label>
+                        <span>&nbsp;</span>
+                        <button class="submit_btn" id="submit_btn">Submit</button>
+                    </label>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <ul>
+            <li>&copy; <a href="http://anwarchoukah.com" title="Anwar Choukah">Anwar Choukah</a>
+            </li>
+            <li><a href="http://anwarchoukah.tumblr.com">My (mainly) comics Tumblr</a>
+            </li>
+            <li><a href="http://twitter.com/achoukah">Twitter</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#submit_btn").click(function() {
+            //get input field values
+            var user_name = $('input[name=name]').val();
+            var user_email = $('input[name=email]').val();
+            var user_message = $('textarea[name=message]').val();
+
+            //simple validation at client's end
+            //we simply change border color to red if empty field using .css()
+            var proceed = true;
+            if (user_name == "") {
+                $('input[name=name]').css('border-color', 'red');
+                proceed = false;
+            }
+            if (user_email == "") {
+                $('input[name=email]').css('border-color', 'red');
+                proceed = false;
+            }
+            if (user_phone == "") {
+                $('input[name=phone]').css('border-color', 'red');
+                proceed = false;
+            }
+            if (user_message == "") {
+                $('textarea[name=message]').css('border-color', 'red');
+                proceed = false;
+            }
+
+            //everything looks good! proceed...
+            if (proceed) {
+                //data to be sent to server
+                post_data = {
+                    'userName': user_name,
+                    'userEmail': user_email,
+                    'userPhone': user_phone,
+                    'userMessage': user_message
+                };
+
+                //Ajax post data to server
+                $.post('contact_me.php', post_data, function(response) {
+
+                    //load json data from server and output message     
+                    if (response.type == 'error') {
+                        output = '<div class="error">' + response.text + '</div>';
+                    } else {
+
+                        output = '<div class="success">' + response.text + '</div>';
+
+                        //reset values in all input fields
+                        $('#contact_form input').val('');
+                        $('#contact_form textarea').val('');
+                    }
+
+                    $("#result").hide().html(output).slideDown();
+                }, 'json');
+
+            }
+        });
+
+        //reset previously set border colors and hide all message on .keyup()
+        $("#contact_form input, #contact_form textarea").keyup(function() {
+            $("#contact_form input, #contact_form textarea").css('border-color', '');
+            $("#result").slideUp();
+        });
+
+    });
+    </script>
+
+
 </body>
 
 </html>

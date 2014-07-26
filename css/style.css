@@ -249,7 +249,7 @@ section img {
   border: thin solid #666666;
   outline: thin solid transparent;
 }
-.contact form input[type=submit] {
+.contact form button.submit_btn {
   -webkit-appearance: none;
   width: 100%;
   padding: 1rem 4rem;
