@@ -66,29 +66,36 @@
 
         <section class="contact">
             <h1>Contact me</h1>
-            <form>
-            <fieldset id="contact_form">
-                <div id="result"></div>
-                <label for="name">
-                    <span>Name</span>
-                    <input type="text" name="name" id="name" placeholder="Enter Your Name" />
-                </label>
+            <form id="contact" name="contact" method="post">  
+              <fieldset>  
+                <label for="name" id="name">Name<span class="required">*</span></label>
+                <input type="text" name="name" id="name" size="30" value="" required/>
 
-                <label for="email">
-                    <span>Email Address</span>
-                    <input type="email" name="email" id="email" placeholder="Enter Your Email" />
-                </label>
+                <label for="email" id="email">Email<span class="required">*</span></label>
+                <input type="text" name="email" id="email" size="30" value="" required/>
 
-                <label for="message">
-                    <span>Message</span>
-                    <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
-                </label>
+                
 
-                <label>
-                    <button class="submit_btn" id="submit_btn">Submit</button>
-                </label>
-            </fieldset>
+                <label for="Message" id="message">Message<span class="required">*</span></label>
+                <textarea name="message" id="message" required></textarea>
+
+                
+
+                <input id="submit" type="submit" name="submit" value="Send" />  
+              </fieldset>  
             </form>
+
+            <div id="success">
+              <span>
+                <p>Your message was sent succssfully! I will be in touch as soon as I can.</p>
+              </span>
+            </div>
+
+            <div id="error">
+              <span>
+                <p>Something went wrong, try refreshing and submitting the form again.</p>
+              </span>
+            </div>
         </section>
     </div>
 

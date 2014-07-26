@@ -1,60 +1,27 @@
-$(document).ready(function() {
-        $("#submit_btn").click(function() {
-            //get input field values
-            var user_name = $('input[name=name]').val();
-            var user_email = $('input[name=email]').val();
-            var user_message = $('textarea[name=message]').val();
-
-            //simple validation at client's end
-            //we simply change border color to red if empty field using .css()
-            var proceed = true;
-            if (user_name == "") {
-                $('input[name=name]').css('border-color', 'red');
-                proceed = false;
-            }
-            if (user_email == "") {
-                $('input[name=email]').css('border-color', 'red');
-                proceed = false;
-            }
-            if (user_message == "") {
-                $('textarea[name=message]').css('border-color', 'red');
-                proceed = false;
-            }
-
-            //everything looks good! proceed...
-            if (proceed) {
-                //data to be sent to server
-                post_data = {
-                    'userName': user_name,
-                    'userEmail': user_email,
-                    'userMessage': user_message
-                };
-
-                //Ajax post data to server
-                $.post('contact_me.php', post_data, function(response) {
-
-                    //load json data from server and output message     
-                    if (response.type == 'error') {
-                        output = '<div class="error">' + response.text + '</div>';
-                    } else {
-
-                        output = '<div class="success">' + response.text + '</div>';
-
-                        //reset values in all input fields
-                        $('#contact_form input').val('');
-                        $('#contact_form textarea').val('');
-                    }
-
-                    $("#result").hide().html(output).slideDown();
-                }, 'json');
-
-            }
-        });
-
-        //reset previously set border colors and hide all message on .keyup()
-        $("#contact_form input, #contact_form textarea").keyup(function() {
-            $("#contact_form input, #contact_form textarea").css('border-color', '');
-            $("#result").slideUp();
-        });
-
+// Contact Form
+$("#contact").submit(function(e){
+  e.preventDefault();
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var text = $("#text").val();
+  var dataString = 'name=' + name + '&email=' + email + '&text=' + text;
+  function isValidEmail(emailAddress) {
+    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+    return pattern.test(emailAddress);
+  };
+ 
+  if (isValidEmail(email) && (text.length > 100) && (name.length > 1)){
+    $.ajax({
+    type: "POST",
+    url: "/wp-content/themes/YOURTHEMENAME/functions.php",
+    data: dataString,
+    success: function(){
+      $('.success').fadeIn(1000);
+    }
     });
+  } else{
+    $('.error').fadeIn(1000);
+  }
+ 
+  return false;
+});

@@ -317,7 +317,7 @@ section{
 
 .contact{
 
-  fieldset{
+  form{
 
 
     label{
@@ -345,7 +345,7 @@ section{
       outline: thin solid transparent;
     }
 
-    button.submit_btn{
+    input[type=submit]{
       -webkit-appearance: none;
       width: 100%;
       padding: 1rem 4rem;
@@ -355,10 +355,10 @@ section{
       cursor: pointer;
       border: thin solid @red-dk;
       transition: all .2s;
-      font-family: @bodytext;
+
     }
 
-    button.submit_btn:hover{
+    input[type=submit]:hover{
       background: @link-hover;
       border: thin solid @link-hover;
     }
@@ -366,6 +366,16 @@ section{
     textarea{
       min-height: 5rem;
     }
+
+
+  }
+
+  .required {
+    color:#e9266d
+    }
+    
+  #success, #error {
+      display:none
   }
 }
 
