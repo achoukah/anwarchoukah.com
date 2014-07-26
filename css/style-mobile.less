@@ -1,0 +1,152 @@
+// VARIABLES
+
+  // COLOURS
+
+  @red:             #930000;
+  @red-lt:          lighten(@red,10%);
+  @red-dk:          darken(@red,10%);
+
+  @rebecca:         #663399;
+  @rebecca-lt:      lighten(@rebecca,20%);
+  @rebecca-dk:      darken(@rebecca,20%);
+
+  @grey:            #666666;
+  @grey-lt:         lighten(@grey,20%);
+  @grey-dk:         darken(@grey,20%);
+
+  @black:           #333333;
+  @black-lt:        lighten(@black,10%);
+  @black-dk:        darken(@black,20%);
+
+  @white:           #eeeeee;
+  @white-lt:        #ffffff;
+  @white-dk:        #dddddd;
+
+
+  // FONTS 
+
+  @headline:        Open Sans Condensed, serif;
+  @bodytext:        Playfair Display, sans-serif;
+  @fontawesome:     FontAwesome, sans-serif;
+
+
+  // SUPERVARIABLES
+
+  @border-colour:   @grey-dk;
+  @bg-colour:       @white;
+  @text-colour:     @black-lt;
+
+  @link:            @red;
+  @link-hover:      @red-lt;
+  @link-active:     @red-dk;
+
+
+
+.container{
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+}
+
+header{
+  padding: 1rem 0 2rem 0;
+
+  nav{
+    position: relative;
+
+    ul{
+      width: auto;
+      margin: auto;
+
+      li{
+        display: block;
+        margin: .1rem;
+        float: none;
+
+        a{
+          
+
+          span{
+            
+          }
+        }
+
+        a:hover, a:active{
+          
+        }
+
+        .homelink:before, .gallerylink:before, .bloglink:before, .aboutlink:before, .contactlink:before{
+          font-family: @fontawesome;
+          display: inline-block;
+          width: 1.3rem;
+
+        }
+
+        .homelink:before{
+          
+          content: "\f015";
+        }
+
+        .gallerylink:before{
+          
+          content: "\f1c5";
+        }
+
+        .bloglink:before{
+          
+          content: "\f036";
+        }
+
+        .aboutlink:before{
+          
+          content: "\f183";
+        }
+
+        .contactlink:before{
+          
+          content: "\f0e0";
+        }
+
+      }
+
+      li:first-child{
+          margin: inherit;
+      }
+    }
+
+    ul:before{
+      content: "\f0c9";
+      font-family: @fontawesome;
+      display: inline-block;
+      width: 1.3rem;
+      padding: 0 0 .5rem 0;
+      cursor: pointer;
+    }
+
+    ul:after{
+      content: "Menu";
+      float: left;
+      position: absolute;
+      top: 0;
+      padding: 0 0 .25rem 1.5rem;
+      border-bottom: @link solid thin;
+      cursor: pointer;
+    }
+  }
+}
+
+
+footer{
+
+
+  ul{
+
+
+    li{
+        display: list-item;
+        border: 0;
+        padding: 0 0 .4rem 0;
+    }
+
+  }
+
+}
