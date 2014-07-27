@@ -27,6 +27,7 @@
 
     @headline:        Open Sans Condensed, serif;
     @bodytext:        Playfair Display, sans-serif;
+    @codefont:        Inconsolata, sans-serif;
     @fontawesome:     FontAwesome, sans-serif;
 
 
@@ -113,13 +114,11 @@ html{
   background: @bg-colour;
   color: @text-colour;
   font-family: @bodytext;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after{
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .container{
@@ -152,9 +151,10 @@ code{
   border-radius: .2rem;
   border: thin dotted @grey-lt;
   background: @white-dk;
+  font-family: @codefont;
+  font-size: .9rem;
   color: @black;
   display: inline-block;
-  font-size: .8rem;
 }
 
 header{
@@ -285,7 +285,8 @@ section{
 
     figcaption{
       font-size: .9rem;
-      // color: @grey;
+      padding: .2rem 0 .1rem 0;
+      color: @grey-lt;
       text-align: right;
 
       strong{
@@ -379,82 +380,57 @@ section{
 
 .contact{
 
-  form{
 
 
-    label{
-      display: block;
-      font-size: .9rem;
-      margin: 0 0 .3rem 0;
-    }
+  label{
+    display: block;
+    font-size: .9rem;
+    margin: 0 0 .3rem 0;
+  }
 
-    input, textarea{
-      width: 100%;
-      max-width: 100%;
-      padding: .4rem;
-      margin: 0 0 1rem 0;
-      font-size: 1rem;
-      font-family: @bodytext;
-      background: @white-dk;
-      outline: thin solid @grey-lt;
-      border: thin solid transparent;
-      transition: all .2s;
-      border-radius: 0;
-    }
+  input, textarea{
+    width: 100%;
+    max-width: 100%;
+    padding: .4rem;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-family: @bodytext;
+    background: @white-dk;
+    border: thin solid transparent;
+    transition: all .2s;
+    border-radius: 0;
+  }
 
-    input:focus, textarea:focus{
-      background: @white;
-      border: thin solid @grey;
-      outline: thin solid transparent;
-    }
+  input:focus, textarea:focus{
+    background: @white;
+    border: thin solid @grey;
+  }
 
-    input[type=submit]{
-      -webkit-appearance: none;
-      width: 100%;
-      padding: 1rem 4rem;
-      font-size: 1.2rem;
-      background: @link;
-      color: @white;
-      cursor: pointer;
-      border: thin solid @red-dk;
-      transition: all .2s;
-      font-family: @bodytext;
-
-    }
-
-    input[type=submit]:hover{
-      background: @link-hover;
-      border: thin solid @link-hover;
-    }
-
-    textarea{
-      min-height: 5rem;
-    }
-
+  input[type=submit]{
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+    background: @link;
+    color: @white;
+    cursor: pointer;
+    border: 0;
+    border-bottom: thick solid @red-dk;
+    transition: all .2s;
+    font-family: @bodytext;
 
   }
 
-  .required {
-    color:#e9266d
+  input[type=submit]:hover, input[type=submit]:focus{
+    background: @link-hover;
+    border: none;
   }
-  #success, #error {
-      display:none
+
+  textarea{
+    min-height: 5rem;
   }
-  #success span, #erro span {
-      display:block;
-      position:absolute;
-      top:0;
-      width:100%
-  }
-  #success span p, #error span p {
-      margin-top:6em
-  }
-  #success span p {
-    color:#9bd32d;
-  }
-  #error span p {
-    color:#c0392b;
-  }
+
+
 }
 
 footer{
