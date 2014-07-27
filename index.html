@@ -2,19 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta name="description" content="Webpage description goes here" />
-    <meta charset="utf-8">
-    <title>Anwar Choukah</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This website will house Anwar Choukah's portfolio, my CV, and my blog. There will also be CSS, HTML, and tech reading lists." />
+  <meta charset="utf-8">
+  <title>Anwar Choukah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <!--[if IE]>
+  <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" media="screen and (max-width: 40rem)" href="css/style-mobile.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Playfair+Display:400,700,900,400italic,700italic,900italic|Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 40rem)" href="css/style-mobile.css" />
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Playfair+Display:400,700,900,400italic,700italic,900italic|Inconsolata' rel='stylesheet' type='text/css'>
+
+  <script async src="js/contact.js"></script>
+  <script async src="js/jquery.form.js"></script>
+  <script async src="//www.google-analytics.com/analytics.js"></script>
 
 
 
@@ -25,69 +29,90 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="index.html">Anwar Choukah</a>
-            </h1>
-            <h2>Graphic and web designer, CSS afficionado, experimentalist</h2>
-        </header>
+  <div class="container">
+    <header>
+      <h1><a href="index.html">Anwar Choukah</a>
+      </h1>
+      <h2>Graphic and web designer, CSS afficionado, experimentalist</h2>
+    </header>
 
-        <section class="intro">
-            <h1>Coming soon &mdash; under construction.</h1>
+    <section class="intro">
+      <h1>Coming soon &mdash; under construction.</h1>
 
 
 
-            <figure>
+      <figure>
 
-                <img src="img/me.jpg" alt="Anwar Choukah lugging two bikes up a hill in Gozo, Malta">
-                <figcaption>
-                    <strong>That's me</strong>shifting two bikes up a hill &mdash; a metaphor for making websites?
-                </figcaption>
-            </figure>
+        <img src="img/me.jpg" alt="Anwar Choukah lugging two bikes up a hill in Gozo, Malta">
+        <figcaption>
+          <strong>That's me</strong>shifting two bikes up a hill &mdash; a metaphor for making websites?
+        </figcaption>
+      </figure>
 
-            <p>
-                <em></em>
-            </p>
+      <p>
+        <em></em>
+      </p>
 
-            <p>When it's finished, this website will house my portfolio, my CV, and my blog.</p>
+      <p>When it's finished, this website will house my portfolio, my CV, and my blog.</p>
 
-            <p>There will also be CSS, HTML, and tech reading lists. as well as a smattering of Oxford commas.</p>
+      <p>There will also be CSS, HTML, and tech reading lists. as well as a smattering of Oxford commas.</p>
 
-            <p>I am a designer, currently working for <a href="http://thesun.co.uk" title="The Sun website, where Anwar Choukah works as a designer">The Sun</a> as a digital web and graphic designer, where I've been for over ten years.</p>
+      <p>I am a designer, currently working for <a href="http://thesun.co.uk" title="The Sun website, where Anwar Choukah works as a designer">The Sun</a> as a digital web and graphic designer, where I've been for over ten years.</p>
 
-            <p>I am the proud father of two lovely daughters and proud partner of my girlfriend.</p>
+      <p>I am the proud father of two lovely daughters and proud partner of my girlfriend.</p>
 
-            <p>If you're into that kind of thing, I'm on <a href="http://twitter.com/achoukah">Twitter</a>.</p>
+      <p>If you're into that kind of thing, I'm on <a href="http://twitter.com/achoukah">Twitter</a>.</p>
 
-            <p>My favourite CSS declaration is <code>box-sizing: border-box;</code>and it should be yours too.</p>
+      <p>My favourite CSS declaration is
+        <code>box-sizing: border-box;</code>and it should be yours too.</p>
 
-            <p>I really want <code>float: bottom;</code>to become a reality.</p>
-        </section>
+      <p>I really want
+        <code>float: bottom;</code>to become a reality.</p>
+    </section>
 
-        <section class="contact">
-            <h1>Contact me</h1>
+    <section class="contact">
+      <h1>Contact me</h1>
 
-            <form action="">
-              
-            </form>
+      <ul id="errors" class="">
+        <li id="info">There were some problems with your form submission:</li>
+      </ul>
+      <p id="success">Thanks for your message! I will get back to you shortly.</p>
+      <form method="post" action="process.php">
+        <label for="name">Name:
+          <span class="required">*</span>
+        </label>
+        <input type="text" id="name" name="name" value="" placeholder="John Doe" required="required"/>
 
-        </section>
-    </div>
+        <label for="email">Email Address:
+          <span class="required">*</span>
+        </label>
+        <input type="email" id="email" name="email" value="" placeholder="johndoe@example.com" required="required" />
 
-    <footer>
-        <ul>
-            <li>&copy; <a href="http://anwarchoukah.com" title="Anwar Choukah">Anwar Choukah</a>
-            </li>
-            <li><a href="http://anwarchoukah.tumblr.com">My (mainly) comics Tumblr</a>
-            </li>
-            <li><a href="http://twitter.com/achoukah">Twitter</a>
-            </li>
-        </ul>
-    </footer>
 
-    <script async src="js/jquery-1.11.0.min.js"></script>
-    <script async src="js/lightbox.min.js"></script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
+        <label for="message">Message:
+          <span class="required">*</span>
+        </label>
+        <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20"></textarea>
+        <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+        <span id="loading"></span>
+        <input type="submit" value="Send" id="submit-button" />
+        
+      </form>
+  </div>
+
+  </section>
+  </div>
+
+  <footer>
+    <ul>
+      <li>&copy; <a href="http://anwarchoukah.com" title="Anwar Choukah">Anwar Choukah</a>
+      </li>
+      <li><a href="http://anwarchoukah.tumblr.com">My (mainly) comics Tumblr</a>
+      </li>
+      <li><a href="http://twitter.com/achoukah">Twitter</a>
+      </li>
+    </ul>
+  </footer>
 
 
 

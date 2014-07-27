@@ -397,7 +397,7 @@ section{
     font-family: @bodytext;
     background: @white-dk;
     border: thin solid transparent;
-    transition: all .2s;
+    // transition: all .2s;
     border-radius: 0;
   }
 
@@ -423,12 +423,30 @@ section{
 
   input[type=submit]:hover, input[type=submit]:focus{
     background: @link-hover;
-    border: none;
+    border-bottom: thick solid @red-dk;
   }
 
   textarea{
     min-height: 5rem;
   }
+
+  .required{
+    color: @red;
+    font-weight: 700;
+  }
+
+  #errors{
+    color: red;
+    display: none;
+  }
+
+  #success{
+    display: none;
+  }
+
+  #errors.visible, #success.visible {
+    display:block;    
+}
 
 
 }

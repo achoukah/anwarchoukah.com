@@ -379,8 +379,6 @@ section img {
   font-family: Playfair Display, sans-serif;
   background: #dddddd;
   border: thin solid transparent;
-  -webkit-transition: all .2s;
-  transition: all .2s;
   border-radius: 0;
 }
 .contact input:focus,
@@ -405,10 +403,25 @@ section img {
 .contact input[type=submit]:hover,
 .contact input[type=submit]:focus {
   background: #c60000;
-  border: none;
+  border-bottom: thick solid #600000;
 }
 .contact textarea {
   min-height: 5rem;
+}
+.contact .required {
+  color: #930000;
+  font-weight: 700;
+}
+.contact #errors {
+  color: red;
+  display: none;
+}
+.contact #success {
+  display: none;
+}
+.contact #errors.visible,
+.contact #success.visible {
+  display: block;
 }
 footer {
   width: 100%;
