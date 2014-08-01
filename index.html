@@ -11,7 +11,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?140801-0928">
 
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Playfair+Display:400,700,900,400italic,700italic,900italic|Inconsolata' rel='stylesheet' type='text/css'>
@@ -33,7 +33,7 @@
     <header>
       <h1><a href="index.html">Anwar Choukah</a>
       </h1>
-      <h2>Graphic and web designer, CSS afficionado, experimentalist</h2>
+      <h2>Graphic and web designer, CSS afficionado</h2>
     </header>
 
     <section class="intro">
@@ -67,13 +67,16 @@
         <code>box-sizing: border-box;</code>and it should be yours too.</p>
 
       <p>I really want
-        <code>float: bottom;</code>to become a reality.</p>
+        <code>float: bottom;</code>to become a reality. It sounds like a joke, but makes so much sense.</p>
     </section>
 
     <section class="contact">
       <h1>Contact me</h1>
 
-      <ul id="errors" class="">
+      <p>Email me at <a href="mailto:choukah@me.com">choukah@me.com</a></p>
+
+
+      <!-- <ul id="errors" class="">
         <li id="info">There were some problems with your form submission:</li>
       </ul>
       <p id="success">Thanks for your message! I will get back to you shortly.</p>
@@ -81,7 +84,7 @@
         <label for="name">Name:
           <span class="required">*</span>
         </label>
-        <input type="text" id="name" name="name" value="" placeholder="John Doe" required="required"/>
+        <input type="text" id="name" name="name" value="" placeholder="John Doe" required="required" />
 
         <label for="email">Email Address:
           <span class="required">*</span>
@@ -93,14 +96,14 @@
           <span class="required">*</span>
         </label>
         <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20"></textarea>
-        <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+        <p id="req-field-desc">
+          <span class="required">*</span>indicates a required field</p>
         <span id="loading"></span>
         <input type="submit" value="Send" id="submit-button" />
-        
-      </form>
-  </div>
 
-  </section>
+      </form> -->
+
+    </section>
   </div>
 
   <footer>
@@ -109,7 +112,19 @@
       </li>
       <li><a href="http://anwarchoukah.tumblr.com">My (mainly) comics Tumblr</a>
       </li>
-      <li><a href="http://twitter.com/achoukah">Twitter</a>
+      <li><a href="https://twitter.com/achoukah" class="twitter-follow-button" data-show-count="false">Follow @achoukah</a>
+        <script>
+        ! function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, 'script', 'twitter-wjs');
+        </script>
       </li>
     </ul>
   </footer>

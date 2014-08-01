@@ -41,7 +41,10 @@
     @link-active:     @red-dk;
 
 
-@media screen and (max-width: 40rem){
+// Smartphones (portrait and landscape)
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
 
 .container{
   width: 100%;
